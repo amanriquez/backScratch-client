@@ -46,7 +46,12 @@ const styles = {
   formContainer: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: colors.green
+    backgroundColor: colors.lightPrimaryColor
+  },
+  formRatingContainer: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: colors.primaryColor
   },
   userContainer: {
     justifyContent: 'center',
@@ -103,13 +108,19 @@ const styles = {
     fontSize: 30
   },
   formTextTitle: {
-    fontSize: 30,
-    marginTop: 30
+    textAlign: 'center',
+    color: colors.white,
+    fontSize: 25,
+    marginTop: 30,
+    paddingLeft: 15,
+    paddingRight: 15,
+    fontWeight: '500'
   },
   formTextSubTitle: {
+    color: colors.white,
     marginBottom: 10,
     marginTop: 15,
-    fontSize: 25
+    fontSize: 20
   },
   loadCircle: {
     width: 100,
@@ -142,6 +153,11 @@ const styles = {
   },
   detailSeperator: {
     width: 350,
+    height: 1,
+    backgroundColor: colors.divider
+  },
+  longDetailSeperator: {
+    width: 500,
     height: 1,
     backgroundColor: colors.divider
   },
