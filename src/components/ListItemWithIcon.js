@@ -43,8 +43,8 @@ const ListItemWithIcon = (rowData) => (
           source={typeIcons[rowData.type.toLowerCase().replace(' ', '_')]}
         />
         <View style={styles.rightContainer}>
-          <Text style={styles.title}>{Helpers.shortenString(rowData.taskName, 20)}</Text>
-          <Text style={styles.desc}>{Helpers.shortenString(rowData.desc, 30)}</Text>
+          <Text style={styles.title}>{Helpers.shortenString(rowData.taskName, 25)}</Text>
+          <Text style={styles.desc}>{Helpers.shortenString(rowData.desc, 35)}</Text>
         </View>
       </View>
       <View style={styles.seperator} />

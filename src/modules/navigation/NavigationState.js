@@ -49,7 +49,7 @@ const initialState = fromJS({
   TasksTab: {
     index: 0, // set to 1 to change to the test task route
     routes: [
-      {key: 'Tasks', title: 'Tasks'}
+      {key: 'Tasks', title: 'backScratch'}
       // {key: 'Counter', title: 'Counter Screen'}
     ]
   },
