@@ -45,6 +45,8 @@ const TaskView = React.createClass({
       item.task.properties,
       {
         taskId: item.task._id, // taskId isn't included in properties
+        requestorUsername: item.user.properties.username,
+        requestorRating: item.user.properties.rating,
         dispatch
       }
     ));

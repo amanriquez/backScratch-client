@@ -10,10 +10,12 @@ import {
 import moment from 'moment';
 import styles from '../../../styles';
 import colors from '../../../styles/colors';
+import stars from '../../../styles/stars';
 import * as TaskStateActions from '../TaskState';
 import * as RatingFormStateActions from '../../taskManager/ratingForm/RatingFormState';
 import * as NavigationStateActions from '../../navigation/NavigationState';
 import RatingFormViewContainer from '../../taskManager/ratingForm/RatingFormViewContainer';
+
 
 const typeIcons = {
   domestic: require('../../../styles/icons/domestic.png'),
@@ -108,8 +110,12 @@ const TaskDetailView = React.createClass({
           <View style={styles.container}>
 
             <Text style={styles.detailTitleText}>{this.props.task.taskName}</Text>
-            <Text style={styles.detailTitleText}>@ Task Requestor Name</Text>
-            <Text style={styles.detailTitleText}>Requestor Rating</Text>
+
+            <Text style={styles.detailTitleText}>{this.props.task.requestorUsername}</Text>
+            <Image
+              source={stars[(Math.round(this.props.task.requestorRating * 2) / 2).toFixed(1)]}
+              style={{height: 25, width: 125, margin: 15}}
+            />
 
             <View style={styles.detailSeperator} />
 
