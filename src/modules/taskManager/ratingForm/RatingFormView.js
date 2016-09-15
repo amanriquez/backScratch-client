@@ -39,6 +39,7 @@ const RatingFormView = React.createClass({
       formData = _.extend(formData, {
         Id: this.props.userId
       });
+      formData.SubmittedRating = parseInt(formData.SubmittedRating, 10);
       console.log(formData);
       this.props.dispatch(RatingFormStateActions.setModalVisible(false));
       this.props.dispatch(RatingFormStateActions.rateTask(
@@ -64,7 +65,7 @@ const RatingFormView = React.createClass({
             style={{backgroundColor: colors.lightPrimaryColor, marginTop: 90}}
           >
             <PickerField
-              ref='Rating'
+              ref='SubmittedRating'
               label='User Rating'
               options={{
                 '': '',
