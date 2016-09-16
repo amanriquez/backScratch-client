@@ -118,10 +118,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 15,
     padding: 15,
-    backgroundColor: colors.primaryColor,
-    shadowColor: colors.black,
-    shadowOpacity: .5,
-    shadowOffset: {height: 5}
+    backgroundColor: colors.primaryColor
   },
   scoreContainer: {
     flex: 1,
