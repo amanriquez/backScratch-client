@@ -129,6 +129,8 @@ const styles = {
   detailTitleText: {
     fontSize: 25,
     marginTop: 15,
+    paddingRight: 20,
+    paddingLeft: 20,
     textAlign: 'center'
   },
   detailSubtitleText: {
