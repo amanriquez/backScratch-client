@@ -116,6 +116,7 @@ const TaskManagerView = React.createClass({
 
         <ListView
           dataSource={this.state.dataSource}
+          enableEmptySections={true}
           renderRow={ListItemWithIcon}
         />
 

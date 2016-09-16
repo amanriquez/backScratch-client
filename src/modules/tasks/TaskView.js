@@ -68,6 +68,7 @@ const TaskView = React.createClass({
 
         <ListView
           dataSource={this.state.dataSource}
+          enableEmptySections={true}
           renderRow={ListItemWithIcon}
         />
 
