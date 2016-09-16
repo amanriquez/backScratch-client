@@ -69,9 +69,12 @@ const UserView = React.createClass({
           <Text style={styles.scoreText}>Completed Tasks: #</Text>
         </View>
 
-        <Text>Bio: {this.props.bio}</Text>
+        <Text style={{paddingLeft: 20, paddingRight: 20}}>{this.props.bio}</Text>
 
-        <Text style={styles.recentTaskText}>Recent Tasks</Text>
+        <View style={{marginTop: 15, padding: 20, paddingTop: 5, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.primaryColor}}>
+          <Image style={{flex: 1}} source={require('../../styles/icons/logo.png')}/>
+          <Text style={styles.buttonText}>backScratch</Text>
+        </View>
 
       </View>
     );
@@ -79,20 +82,7 @@ const UserView = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={{backgroundColor: 'white'}}>
-          <View style={styles.container}>
-            {this.renderUserInfo()}
-
-            <TouchableOpacity
-              onPress={this.reset}
-              style={styles.button}
-            >
-              <Text style={styles.buttonText}>
-                Log Out?
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </ScrollView>
+        {this.renderUserInfo()}
       </View>
     );
   }
@@ -107,7 +97,6 @@ const circle = {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     backgroundColor: colors.white
   },
@@ -138,7 +127,8 @@ const styles = StyleSheet.create({
     marginTop: 15,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#FFFFFF',
+    paddingBottom: 1000
   },
   userProfilePhoto: {
     ...circle,
@@ -158,7 +148,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
     textAlign: 'center',
-    color: colors.white
+    color: colors.white,
+    backgroundColor: colors.primaryColor
   },
   ratingText: {
     textAlign: 'center',
